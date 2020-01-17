@@ -25,7 +25,7 @@ def checkOnName(func):
     async def wrapper(message):
         name = re.sub(r'/about|/test', '', message.text).strip()
         if not name:
-            return await message.reply("Введиnt имя!!!", reply=False)
+            return await message.reply("Введите имя!!!", reply=False)
         return await func(message)
 
     return wrapper
